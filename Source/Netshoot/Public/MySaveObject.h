@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "GenericPlatform/GenericPlatformFile.h"
+#include "Misc/FileHelper.h"
 #include "MySaveObject.generated.h"
 
 /**
@@ -20,4 +22,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void SaveGame(FString Name, int32 Score);
+
+	UFUNCTION(BlueprintCallable)
+	TArray<FString> LoadScore();
 };
